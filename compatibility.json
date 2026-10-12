@@ -1,0 +1,13 @@
+{
+  "release": "v0.1.0",
+  "tabs_workshop_id": "3148138736",
+  "protocol": 3,
+  "original_sha256": {
+    "main.lua": "84dc0a005180e8c83accbe7aad6cc9548d985912b6070c4c3a6033c04bda4994",
+    "TABS/scripts/ballistics.lua": "9536edc20189cadd5c0f91c1c77a5820a5062772e7223a8f242fa2a6aac599f2"
+  },
+  "replacement_sha256": {
+    "main.lua": "e4f97ef2a6389f5e60e2ec46d31e0f97bfc8ac3bd1d0f63459b2d016e4654fae",
+    "TABS/scripts/ballistics.lua": "f1cdb6822c68c052662e79844af4f7975d8a13e08dbb3a508884ae7e287c07a8"
+  }
+}

@@ -1,6 +1,4 @@
 name = TABS Hit Replay
-sc_name = TABS 击穿回放
 author = Andrew
 description = Unofficial hit replay add-on for TABS Vehicle Framework. Requires TABS and a separately installed compatible Hit Replay bridge patch; subscribing alone is not sufficient. Shows vehicle hit trajectories from the latest 3-second window, internal module states, and optional TABS Crew outlines. F8: toggle. F9: replay. F10: target mode. Standalone handheld weapon shots are not currently recorded.
-sc_description = TABS Vehicle Framework 的非官方击穿回放附加模组。需启用原版 TABS，并单独安装兼容版本的 Hit Replay 桥接补丁；仅订阅无法使用。显示车辆最近三秒命中弹道、内部模块状态，并可显示 TABS Crew 乘员轮廓（可选依赖）。F8：开关；F9：重播；F10：目标模式。目前不采集独立手持武器的射击。
 tags = Gameplay

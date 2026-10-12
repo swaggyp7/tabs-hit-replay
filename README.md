@@ -96,9 +96,3 @@ Get-FileHash -Algorithm SHA256 -LiteralPath 'D:/SteamLibrary/steamapps/workshop/
 ## Bridge scope and compatibility
 
 The bridge appends recording code to TABS `main.lua` and adds six guarded hook sites in `TABS/scripts/ballistics.lua` for impact, penetration and fragment association. It does not intentionally change native damage formulas or handheld weapon scripts. It requires the exact original file hashes in `compatibility.json`; no universal compatibility is claimed. This release has local scripted verification, not exhaustive compatibility testing on other installations.
-
-## Credits and third-party files
-
-TABS Vehicle Framework belongs to its original creators; see the linked Workshop page for credits. Optional TABS Crew belongs to its respective creators. This is an unofficial project and does not claim endorsement.
-
-The bridge replacement ZIP contains modified TABS source files, which remain third-party material. No blanket license or redistribution permission for TABS is granted by this repository. The TABS page states “DO NOT REUPLOAD WITHOUT PERMISSION”; this README does not represent proof of permission. Crew assets are not included.

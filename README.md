@@ -4,7 +4,7 @@
 
 **Subscribing to TABS or installing this add-on alone is not sufficient: the matching bridge patch is required.**
 
-[Download v0.1.0](https://github.com/swaggyp7/tabs-hit-replay/releases/tag/v0.1.0) · [Original TABS](https://steamcommunity.com/sharedfiles/filedetails/?id=3148138736) · [Optional TABS Crew](https://steamcommunity.com/sharedfiles/filedetails/?id=3561237115)
+[Download v0.1.0](https://github.com/swaggyp7/tabs-hit-replay/releases/tag/v0.1.0) · [Original TABS](https://steamcommunity.com/sharedfiles/filedetails/?id=3148138736) · [Optional TABS Crew](https://steamcommunity.com/sharedfiles/filedetails/?id=3815951830)
 
 ## Downloads
 

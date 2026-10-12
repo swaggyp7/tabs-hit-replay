@@ -60,7 +60,7 @@ That is all you need to copy. Do not put these files in the Hit Replay mod folde
 
 Start Teardown. Enable **TABS Vehicle Framework** and **TABS Hit Replay** in Mod Manager, then load a level. Hit a TABS vehicle with a vehicle-mounted weapon to see the replay. Press **F9** to replay the saved hits.
 
-[Andrew's enhanced TABS Crew](https://steamcommunity.com/sharedfiles/filedetails/?id=3815951830) is optional. Subscribe to it if you want crew outlines; no Crew files need replacing.
+[Enhanced TABS Crew](https://steamcommunity.com/sharedfiles/filedetails/?id=3815951830) is optional. Subscribe to it if you want crew outlines; no Crew files need replacing.
 
 ## Updates and uninstalling
 

@@ -2,50 +2,87 @@
 
 ![Preview](tabs-hit-replay/preview.jpg)
 
-**Subscribing to TABS or installing this add-on alone is not sufficient: the matching bridge patch is required.**
+**Subscribe to TABS Hit Replay on Steam Workshop, then manually install the TABS bridge patch below.**
 
 [Download v0.1.0](https://github.com/swaggyp7/tabs-hit-replay/releases/tag/v0.1.0) · [Original TABS](https://steamcommunity.com/sharedfiles/filedetails/?id=3148138736) · [Optional TABS Crew](https://steamcommunity.com/sharedfiles/filedetails/?id=3815951830)
 
-## Downloads
+## What to download
 
-- `TABS-Hit-Replay-v0.1.0.zip`: the standalone replay mod.
-- `TABS-Hit-Replay-Bridge-v0.1.0.zip`: all required TABS replacement files, plus installation instructions and a compatibility manifest.
-- `SHA256SUMS.txt`: SHA-256 checksums for both archives.
+**Get TABS Hit Replay from the Steam Workshop. This Release only provides the patch for TABS Vehicle Framework.**
 
-## Installation
+Download **[TABS-Hit-Replay-Bridge-v0.1.0.zip](https://github.com/swaggyp7/tabs-hit-replay/releases/download/v0.1.0/TABS-Hit-Replay-Bridge-v0.1.0.zip)**. You do not need to download or install the replay mod from GitHub.
 
-1. Subscribe to [TABS Vehicle Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3148138736) and its required Workshop items.
-2. Extract `TABS-Hit-Replay-v0.1.0.zip` into `Documents/Teardown/mods`. The resulting path must be `mods/tabs-hit-replay/info.txt`. Do not enable duplicate local and Workshop copies of this add-on.
-3. Close Teardown. Locate `<SteamLibrary>/steamapps/workshop/content/1167630/3148138736/` in the Steam library holding Teardown.
-4. Compare SHA-256 hashes of `main.lua` and `TABS/scripts/ballistics.lua` against `original_sha256` in `compatibility.json`. If they already match `replacement_sha256`, this bridge version is installed. Stop on any other hashes: your TABS version or another patch may be incompatible.
-5. Back up both original files outside the Workshop folder, retaining their relative paths. Never overwrite an original backup with patched files.
-6. Extract `TABS-Hit-Replay-Bridge-v0.1.0.zip`. Copy the **contents** of its `replacement` folder into `3148138736`, merging directories and replacing exactly the two files shown below. Do not copy the outer `replacement` folder itself. Verify the resulting hashes against `replacement_sha256`.
-7. Start Teardown, enable TABS and TABS Hit Replay, and reload the level. Hit a TABS vehicle with a vehicle-mounted weapon to check the replay. TABS Crew is optional and requires no patch.
+## Manual installation
 
-### Replacement paths and verification
+### 1. Subscribe on Steam
 
-Use the Steam library where Teardown is installed; it may be on a different drive. The destination is the TABS **framework** Workshop directory, not the Teardown game directory, the vehicle pack, or the Hit Replay add-on directory.
+Subscribe to **TABS Hit Replay** in the Steam Workshop, and to [TABS Vehicle Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3148138736) with its required items. Wait for Steam to finish downloading them, then **close Teardown**.
+
+### 2. Open the TABS folder
+
+In Steam, right-click **Teardown > Manage > Browse local files**. This opens a folder like:
 
 ```text
-<SteamLibrary>/steamapps/workshop/content/1167630/3148138736/
-|-- main.lua
-`-- TABS/
-    `-- scripts/
-        `-- ballistics.lua
+D:/SteamLibrary/steamapps/common/Teardown
 ```
 
-For example, run these PowerShell commands after adjusting the drive and library path:
+Go up two folders to **steamapps**, then open:
+
+```text
+workshop/content/1167630/3148138736
+```
+
+This is the TABS Vehicle Framework folder. Your drive or Steam library name may differ. Leave this window open.
+
+### 3. Back up the original files
+
+Copy these two files from the TABS folder to a safe place, such as a new folder on your Desktop:
+
+- `main.lua` (directly inside `3148138736`)
+- `ballistics.lua` (inside `3148138736/TABS/scripts`)
+
+Keep these originals so you can undo the patch. If you already patched TABS, do not overwrite your original backups.
+
+### 4. Replace the two files
+
+Extract the downloaded bridge ZIP. Open its **replacement** folder.
+
+Copy each file to the matching destination below, choosing **Replace the file in the destination** when Windows asks:
+
+| File from the extracted ZIP | Destination inside the TABS folder |
+|---|---|
+| `replacement/main.lua` | `3148138736/main.lua` |
+| `replacement/TABS/scripts/ballistics.lua` | `3148138736/TABS/scripts/ballistics.lua` |
+
+That is all you need to copy. Do not put these files in the Hit Replay mod folder or in `Documents/Teardown/mods`. Do not copy the outer `replacement` folder itself.
+
+### 5. Play
+
+Start Teardown. Enable **TABS Vehicle Framework** and **TABS Hit Replay** in Mod Manager, then load a level. Hit a TABS vehicle with a vehicle-mounted weapon to see the replay. Press **F9** to replay the saved hits.
+
+[Andrew's enhanced TABS Crew](https://steamcommunity.com/sharedfiles/filedetails/?id=3815951830) is optional. Subscribe to it if you want crew outlines; no Crew files need replacing.
+
+## Updates and uninstalling
+
+This patch targets a specific TABS version. A TABS update may remove the patch or make these replacement files incompatible. Do not overwrite an unknown newer version with old files. Other patches that replace these same files can conflict.
+
+To undo this patch, close Teardown and restore the two original files you backed up. Only use backups from the same TABS version; if TABS has updated since the backup, obtain a clean current TABS installation instead. Unsubscribe from or disable Hit Replay separately if you no longer want it.
+
+<details>
+<summary>Advanced: check the supported TABS version and file hashes</summary>
+
+The ZIP includes `compatibility.json`. Its `original_sha256` values identify the supported unmodified TABS files; `replacement_sha256` identifies the installed patch. If the files match neither set, stop and check compatibility before replacing them.
+
+In PowerShell, adjust the paths to your Steam library:
 
 ```powershell
 Get-FileHash -Algorithm SHA256 -LiteralPath 'D:/SteamLibrary/steamapps/workshop/content/1167630/3148138736/main.lua'
 Get-FileHash -Algorithm SHA256 -LiteralPath 'D:/SteamLibrary/steamapps/workshop/content/1167630/3148138736/TABS/scripts/ballistics.lua'
 ```
 
-Before installation, both hashes must match `original_sha256` in `compatibility.json`. After installation, both must match `replacement_sha256`. The bridge ZIP's README and compatibility manifest are reference documents; they do not need to be copied into TABS. Use `SHA256SUMS.txt` to check the downloaded archives separately.
+`SHA256SUMS.txt` verifies the downloaded bridge ZIP. The README and compatibility manifest are documentation; they do not need to be copied into TABS.
 
-### Updating, conflicts, and uninstalling
-
-TABS updates can remove the bridge. Check compatibility before reapplying; never overwrite a newer unknown version with this package. Other patches editing the same files need manual integration. To uninstall, close the game and restore your matching original backups only if the current files still match this release's patched hashes. If TABS has updated, obtain a clean current framework instead of restoring stale backups. Disable/remove the replay add-on separately.
+</details>
 
 ## Features and controls
 

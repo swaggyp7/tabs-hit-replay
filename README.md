@@ -62,28 +62,6 @@ Start Teardown. Enable **TABS Vehicle Framework** and **TABS Hit Replay** in Mod
 
 [Enhanced TABS Crew](https://steamcommunity.com/sharedfiles/filedetails/?id=3815951830) is optional. Subscribe to it if you want crew outlines; no Crew files need replacing.
 
-## Updates and uninstalling
-
-This patch targets a specific TABS version. A TABS update may remove the patch or make these replacement files incompatible. Do not overwrite an unknown newer version with old files. Other patches that replace these same files can conflict.
-
-To undo this patch, close Teardown and restore the two original files you backed up. Only use backups from the same TABS version; if TABS has updated since the backup, obtain a clean current TABS installation instead. Unsubscribe from or disable Hit Replay separately if you no longer want it.
-
-<details>
-<summary>Advanced: check the supported TABS version and file hashes</summary>
-
-The ZIP includes `compatibility.json`. Its `original_sha256` values identify the supported unmodified TABS files; `replacement_sha256` identifies the installed patch. If the files match neither set, stop and check compatibility before replacing them.
-
-In PowerShell, adjust the paths to your Steam library:
-
-```powershell
-Get-FileHash -Algorithm SHA256 -LiteralPath 'D:/SteamLibrary/steamapps/workshop/content/1167630/3148138736/main.lua'
-Get-FileHash -Algorithm SHA256 -LiteralPath 'D:/SteamLibrary/steamapps/workshop/content/1167630/3148138736/TABS/scripts/ballistics.lua'
-```
-
-`SHA256SUMS.txt` verifies the downloaded bridge ZIP. The README and compatibility manifest are documentation; they do not need to be copied into TABS.
-
-</details>
-
 ## Features and controls
 
 - Recent 3-second hit window with animated projectile and fragment paths; F9 replays the saved window.

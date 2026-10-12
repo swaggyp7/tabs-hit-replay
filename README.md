@@ -1,7 +1,5 @@
 # TABS Hit Replay
 
-By **Andrew**. An unofficial hit replay add-on for Teardown's TABS Vehicle Framework.
-
 ![Preview](tabs-hit-replay/preview.jpg)
 
 **Subscribing to TABS or installing this add-on alone is not sufficient: the matching bridge patch is required.**

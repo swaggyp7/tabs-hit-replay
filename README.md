@@ -4,7 +4,7 @@
 
 **Subscribe to TABS Hit Replay on Steam Workshop, then manually install the TABS bridge patch below.**
 
-[Download v0.1.0](https://github.com/swaggyp7/tabs-hit-replay/releases/tag/v0.1.0) · [Original TABS](https://steamcommunity.com/sharedfiles/filedetails/?id=3148138736) · [Optional TABS Crew](https://steamcommunity.com/sharedfiles/filedetails/?id=3815951830)
+[Steam Workshop]([https://github.com/swaggyp7/tabs-hit-replay/releases/tag/v0.1.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3818578313)) ·[Download v0.1.0](https://github.com/swaggyp7/tabs-hit-replay/releases/tag/v0.1.0) · [Original TABS](https://steamcommunity.com/sharedfiles/filedetails/?id=3148138736) · [Optional TABS Crew](https://steamcommunity.com/sharedfiles/filedetails/?id=3815951830)
 
 ## What to download
 
